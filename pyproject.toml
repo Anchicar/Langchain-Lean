@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "langchain-lean"
+version = "0.1.0"
+description = "Integración de Lean 4 en agentes de LangChain para verificación formal automática."
+authors = ["Camila Zapata"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/tu-usuario/langchain-lean"
+keywords = ["langchain", "lean4", "leandojo", "formal-verification", "math-ai", "agents"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = ">=0.1.0"
+leandojo = ">=2.1.0"
+docker = "^7.0.0"
+pydantic = "^2.0.0"
+langchain-openai = ">=0.0.8" # Para los ejemplos por defecto
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.0.0"
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+# Esto permite que el usuario ejecute un comando en consola si quieres
+# langchain-lean-init = "langchain_lean.cli:init_env"
